@@ -1,0 +1,181 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700');
+
+.editReport{
+   
+    padding-bottom: 60px;
+}
+
+a, a:hover, a:focus{outline:none; text-decoration:none;}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{float:left; width:100%; color:#195C9D !important; margin-bottom:30px; }
+h1,h2,h3,h4,h5,h6 span{font-family: 'Libre Baskerville', serif; display:block; font-size:45px; text-transform:none; margin-bottom:20px; margin-top:30px; font-weight:700}
+h1,h2,h3,h4,h5,h6 a{color:#fff; font-weight:bold;}
+
+
+section{
+
+    float:left;
+    width:100%;
+    background: #43cea2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #185a9d, #43cea2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #185a9d, #43cea2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding:30px 0;
+}
+
+.card {
+    -moz-box-direction: normal;
+    -moz-box-orient: vertical;
+    background-color: #fff;
+    border-radius: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom:1px;
+    border:none;
+    margin-bottom: 5px;
+}
+.card-header:first-child {
+    border-radius: 0;
+}
+.card-header {
+    background-color: #f7f7f9;
+    margin-bottom: 0;
+    padding: 20px 1.25rem;
+    border:none;
+
+}
+.card-header a i{
+    float:left;
+    font-size:25px;
+    padding:5px 0;
+    margin:0 25px 0 0px;
+    color:#195C9D;
+}
+.card-header i{
+    float:right;
+    font-size:30px;
+    width:1%;
+    margin-top:8px;
+    margin-right:10px;
+}
+.card-header a{
+    width:97%;
+    float:left;
+    color:#565656;
+}
+.card-header p{
+    margin:0;
+}
+
+.card-header h3{
+    margin:0 0 0px;
+    font-size:20px;
+    font-family: 'Slabo 27px', serif;
+    font-weight:bold;
+    color:#3fc199;
+}
+.card-block {
+    -moz-box-flex: 1;
+    flex: 1 1 auto;
+    padding: 20px;
+    color:#232323;
+    box-shadow:inset 0px 4px 5px rgba(0,0,0,0.1);
+    border-top:1px soild #000;
+    border-radius:0;
+}
+
+
+
+.table-hdr{
+  background: #DDD;
+}
+.ng2-smart-th{
+  background: #DDD;
+}
+body > app-root > app-main-layout > app-report > div > div.col-10.p-0 > app-service-user > div > div.col-10.main-content > div.homeReport > ng2-smart-table > table > thead{
+  line-height: 1.3em !important;
+}
+.searchDiv{
+  margin:10px;
+} *
+
+
+.homeReport ng2-smart-table  table  thead  .ng2-smart-titles{
+  background: #ddd !important;
+}
+.homeReport  ng2-smart-table  table  thead .ng2-smart-filters{
+  /* display: none; */
+  padding-bottom: 50px;
+}
+.homeReport > ng2-smart-table > table > tbody > tr > td,
+.homeReport > ng2-smart-table > table > thead > tr > th{
+   border: 1px solid #ddd;
+}
+
+.ng2-smart-pagination .page-link-next, .ng2-smart-pagination .page-link-prev {
+  font-size: 10px;
+  line-height: 17px !important;
+}
+.ng2-smart-pagination-nav{
+  position: absolute;
+  right: 25px;
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+ng2-smart-table-pager{
+  background: #FFF !important;
+}
+.msgsearchDiv{
+    margin:10px;
+  } *
+  
+  
+  .msghomeReport ng2-smart-table  table  thead  .ng2-smart-titles{
+    background: #ddd !important;
+  }
+  .msghomeReport  ng2-smart-table  table  thead .ng2-smart-filters{
+    /* display: none; */
+    padding-bottom: 50px;
+  }
+  .msghomeReport > ng2-smart-table > table > tbody > tr > td,
+  .msghomeReport > ng2-smart-table > table > thead > tr > th{
+     border: 1px solid #ddd;
+  }
+
+  .xmlsearchDiv{
+    margin:10px;
+  } *
+  
+  
+  .xmlhomeReport ng2-smart-table  table  thead  .ng2-smart-titles{
+    background: #ddd !important;
+  }
+  .xmlhomeReport  ng2-smart-table  table  thead .ng2-smart-filters{
+    /* display: none; */
+    padding-bottom: 50px;
+  }
+  .xmlhomeReport > ng2-smart-table > table > tbody > tr > td,
+  .xmlhomeReport > ng2-smart-table > table > thead > tr > th{
+     border: 1px solid #ddd;
+  }
+
+  /* For Firefox */
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+/* Webkit browsers like Safari and Chrome */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.container{
+  margin-bottom: 10%;
+}

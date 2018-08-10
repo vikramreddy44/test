@@ -1,0 +1,49 @@
+<form [formGroup]="searchForm" (ngSubmit)="fetchReportData(searchForm.value)">
+
+  <div id="search" class="card card-block bg-faded ">
+    <h2>Search</h2>
+    <div class="mainDiv">
+      <div class="row">
+        <div class="col col-2 form-group">
+          <label for="project_id">Project ID</label>
+          <select class="form-control" formControlName="projectId">
+            <option>7597</option>
+          </select>
+        </div>
+        <div class="col col-2 form-group">
+          <label for="error_number">Error Number</label>
+          <input type="text" class="form-control" formControlName="errorNumber"  name="error number" maxlength="64">
+        </div>
+        <div class="col col-2 form-group">
+          <label for="action_name">Action Name</label>
+          <input type="text" class="form-control" formControlName="actionName" maxlength="64">
+        </div>
+        <div class="col col-1 form-group">
+          <label for="field_name">Field Name</label>
+          <input type="text" class="form-control" formControlName="fieldName" maxlength="64">
+        </div>
+        <div class="col col-1 form-group">
+          <label for="db_record_ts">DB Record</label>
+          <input type="text" class="form-control" formControlName="dbRecord" maxlength="64">
+        </div>
+        <div class="col col-1 form-group">
+          <label for="auto_create_flag"> Auto Flag </label>
+          <select class="form-control" formControlName="autoFlag">
+            <option value="0">0</option>
+            <option value="1">1</option>
+          </select>
+        </div>
+        <div class="col col-1 form-group">
+          <label for="active_flag"> Active Flag </label>
+          <select class="form-control" formControlName="activeFlag">
+            <option value="Y">Yes</option>
+            <option value="N">No</option>
+          </select>
+        </div>
+        <div class="col col-2 form-group searchButton">
+          <input type="submit" class="btn btn-lg btn-success" value="Search">
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,10 @@
+<div class="main-body">
+    <div class="row searchDiv">
+      <app-search (submit)="onSubmitClicked($event)"></app-search>
+    </div>
+    <div class="homeReport">
+      <ng2-smart-table [settings]="settings" (edit)="rowSelected($event,'edit')" (create)="rowSelected($event,'add')" class="table-striped"
+        [source]="data"></ng2-smart-table>
+      <!-- <ng2-smart-table [settings]="settings" (userRowSelect)="rowSelected($event)" class="table-striped" [source]="data"></ng2-smart-table> -->
+    </div>
+  </div>

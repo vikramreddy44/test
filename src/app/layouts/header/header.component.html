@@ -1,0 +1,55 @@
+<header class="header">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand">
+          <a class="" [routerLink]="['/dashboard']">UT Southwestern Medical Center</a>
+        </a>
+      </div>
+      <ul class="nav d-none d-md-flex">
+        <li class="nav-item">
+          <a class="nav-link fa fa-home" routerLinkActive="active" [routerLink]="['/dashboard']" data-toggle="tooltip" data-placement="bottom"
+            title="Home"> Home</a>
+        </li>
+      
+        <li class="nav-item">
+          <div class="profile-details">
+            <span>
+              <img src="assets/images/profile-icon.png" title="Profile Pic" />
+            </span>
+            <div class="profile-details-menu">
+              <div class="navbar-toggler" (click)="toggleCollapse()">
+              </div>
+              <div class="collapse" [class.show]="show">
+                <span>{{ userName }}</span>
+                <a  routerLink='/auth/login' routerLinkActive='active'>LOGOUT</a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+
+      <div class="header-mobile-menu d-md-none">
+        <div class="navbar-toggler" (click)="toggleCollapseMenu()">
+        </div>
+        <div class="collapse" [class.showMenu]="showMenu">
+          <div class="profile-details">
+            <span>
+              <img src="assets/images/profile-icon.png" title="Profile Pic" />
+            </span>
+            <span class="username">{{ userName }}</span>
+          </div>
+          <a class="dropdown-item home" routerLinkActive="active" [routerLink]="['/fieldrule/home']">
+            <i></i>
+            <span>Home</span>
+          </a>
+          <div class="logout-btn">
+            <a  routerLink='/auth/login' routerLinkActive='active'>LOGOUT</a>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

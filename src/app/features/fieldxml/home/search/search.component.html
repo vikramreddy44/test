@@ -1,0 +1,42 @@
+<form [formGroup]="searchForm" (ngSubmit)="fetchReportData(searchForm.value)">
+
+    <div id="search" class="card card-block bg-faded ">
+      <h2>Search</h2>
+      <div class="mainDiv">
+        <div class="row">
+          <div class="col col-2 form-group">
+            <label for="project_id">Project ID</label>
+            <select class="form-control" formControlName="projectId">
+              <option>7597</option>
+            </select>
+          </div>
+          <div class="col col-2 form-group">
+            <label for="field_name">Field Name</label>
+            <input type="text" class="form-control" formControlName="fieldName" maxlength="64">
+          </div>
+          <div class="col col-1 form-group">
+            <label for="auto_create_flag"> Auto Flag </label>
+            <select class="form-control" formControlName="autoFlag">
+              <option value="0">0</option>
+              <option value="1">1</option>
+            </select>
+          </div>
+          <div class="col col-2 form-group">
+            <label for="field_rule_seq">Field Seq</label>
+            <input type="text" class="form-control" formControlName="fieldRuleSeq" maxlength="64">
+          </div>
+          <div class="col col-2 form-group">
+              <label for="custom_xml">Custom Xml</label>
+              <input type="text" class="form-control" formControlName="customXml" maxlength="64">
+            </div>
+            <div class="col col-2 form-group">
+                <label for="db_record_ts">Db Record</label>
+                <input type="text" class="form-control" formControlName="dbRecord" maxlength="64">
+              </div>
+          <div class="col col-2 form-group xmlsearchButton">
+            <input type="submit" class="btn btn-lg btn-success" value="Search">
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>

@@ -1,0 +1,56 @@
+<form [formGroup]="editForm" (ngSubmit)="editFormSubmit(editForm.value)">
+  <div class="container  editReport">
+    <h2>Edit Details</h2>
+    <div class="card card-block bg-faded ">
+      <div class=" float-sm-right">
+        <div class="col-xs-4">
+          <div class="float-right px-1">
+            <button type="submit" class="btn btn-success" [disabled]="!editForm.valid" value="">Update</button>
+          </div>
+        </div>
+        <div class="col-xs-4">
+          <div class="float-right">
+            <button type="button" class="btn btn-danger" (click)=onDelete()>Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="primary" class="card card-block bg-faded ">
+      <h2>Field Xml</h2>
+      <div class="">
+        <div class="row">
+          <div class="col col-sm-4 form-group">
+            <label for="project_id">Project ID: <span style="color:red">*</span></label>
+            <select class="form-control" formControlName="project_id" required>
+              <option>7597</option>
+            </select>
+          </div>
+          <div class="col col-sm-4 form-group">
+            <label for="fieldName">Field Name:<span style="color:red">*</span> </label>
+            <input type="text" class="form-control" formControlName="field_name" maxlength="64" required>
+          </div>
+
+          <div class="col-sm-4 form-group">
+            <label for="Autoflag"> Auto Flag: <span style="color:red">*</span></label>
+            <select class="form-control" formControlName="auto_create_flag" required>
+              <option value="0">0</option>
+              <option value="1">1</option>
+            </select>
+          </div>
+          <div class="col-sm-4 form-group">
+            <label for="FieldRuleSeq">Field Rule Seq:<span style="color:red">*</span></label>
+            <input type="text" class="form-control" formControlName="field_rule_seq" maxlength="64" required>
+          </div>
+          <div class="col col-sm-4 form-group">
+            <label for="customXml">Custom Xml: </label>
+            <input type="text" class="form-control" formControlName="custom_xml" maxlength="64">
+          </div>
+          <div class="col col-sm-4 form-group">
+            <label for="DbRecord">DB Record: </label>
+            <input type="text" class="form-control" formControlName="db_record_ts" maxlength="64">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

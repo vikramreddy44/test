@@ -1,0 +1,43 @@
+<form [formGroup]="searchForm" (ngSubmit)="fetchReportData(searchForm.value)">
+
+    <div id="search" class="card card-block bg-faded ">
+      <h2>Search</h2>
+      <div class="mainDiv">
+        <div class="row">
+          <div class="col col-1 form-group">
+            <label for="project_id">Project ID</label>
+            <select class="form-control" formControlName="projectId">
+              <option>7597</option>
+            </select>
+          </div>
+          <div class="col col-2 form-group">
+            <label for="msg_code">Msg Code</label>
+            <input type="text" class="form-control" formControlName="msgCode" maxlength="64">
+          </div>
+          <div class="col col-1 form-group">
+            <label for="msg_text">Msg text:</label>
+            <input type="text" class="form-control" formControlName="msgText" maxlength="64">
+          </div>
+          <div class="col col-1 form-group">
+            <label for="msg_action">Msg action:</label>
+            <input type="text" class="form-control" formControlName="msgAction" maxlength="64">
+          </div>
+          <div class="col col-1 form-group">
+            <label for="msg_type">Msg Type:</label>
+            <input type="text" class="form-control" formControlName="msgType" maxlength="64">
+          </div>
+          <div class="col col-1 form-group">
+            <label for="msg_cat">Msg Cat:</label>
+            <input type="text" class="form-control" formControlName="msgCat" maxlength="64">
+          </div>
+          <div class="col col-2 form-group">
+            <label for="db_record_ts">DB Record:</label>
+            <input type="text" class="form-control" formControlName="dbRecord" maxlength="64">
+          </div>
+          <div class="col col-2 form-group searchButton">
+            <input type="submit" class="btn btn-lg btn-success" value="Search">
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>

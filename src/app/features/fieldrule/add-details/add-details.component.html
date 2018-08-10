@@ -1,0 +1,316 @@
+<form [formGroup]="addForm" (ngSubmit)="addFormSubmit(addForm.value)" >
+  <div class="container  addReport">
+    <h2>Add Details</h2>
+    <div class="card card-block bg-faded">
+      <div class="float-sm-right">
+        <div class="col-xs-4">
+          <div class="float-right px-1">
+            <button type="submit" class="btn btn-success" [disabled]="!addForm.valid" value="">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="primary" class="card card-block bg-faded">
+      <h2>Primary</h2>
+      <div class="">
+        <div class="row">
+          <div class="col col-sm-4 form-group">
+            <label for="ProjectId">Project ID:<span style="color:red">*</span></label>
+            <select class="form-control" formControlName="project_id" required>
+            <option>7597</option>
+          </select>
+            
+          </div>
+          <div class="col col-sm-4 form-group">
+            <label for="Errornumber">Error Number:<span style="color:red">*</span></label>
+            <input type="text" class="form-control"  formControlName="error_number" maxlength="64" required>
+          </div>
+          <div class="col col-sm-4 form-group">
+            <label for="DBrecord">DB Record:</label>
+            <input type="text" readonly disabled class="form-control"  formControlName="db_record_ts" maxlength="64">
+           </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4 form-group">
+            <label for="Autoflag"> Auto Flag: <span style="color:red">*</span></label>
+            <select class="form-control" formControlName="auto_create_flag" required>
+            <option value="0">0</option>
+            <option value="1">1</option>
+          </select>
+          </div>
+          <div class="col-sm-4 form-group">
+            <label for="Activeflag"> Active Flag: <span style="color:red">*</span></label>
+               <select class="form-control" formControlName="active_flag" required> 
+              <option value="Y">Yes</option>
+              <option value="N">No</option>
+          </select>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div id="email" class="card card-block bg-faded ">
+      <h2>Email</h2>
+      <div class="">
+        <div class="row">
+          <div class="col col-sm-4 form-group">
+            <label for="Emailaddress" class="required">Email Address:</label>
+            <input type="email" class="form-control"  formControlName="email_address">
+          </div>
+          <div class="col col-sm-4 form-group">
+            <label for="Emailsubject">Email Subject:</label>
+            <input type="text" class="form-control"  formControlName="email_subject">
+          </div>
+          <div class="col col-sm-4 form-group">
+            <label for="Emailbody">Email Body:</label>
+            <input type="text" class="form-control"  formControlName="email_body">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4 form-group">
+            <label for="Emaillink" class="required">Email Link:</label>
+            <input type="text" class="form-control"  formControlName="email_link"
+              maxlength="64">
+          </div>
+          <div class="col-sm-4 form-group">
+            <label for="Actionname">Action Name:</label>
+            <input type="text" class="form-control" formControlName="action_name"
+              maxlength="64">
+          </div>
+          <div class="col-sm-4 form-group">
+            <label for="Queryorder">Query Order:</label>
+            <input type="text" class="form-control"  formControlName="query_order" maxlength="64">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4 form-group">
+            <label for="Level1days" class="required">Level1 Days:<span style="color:red">*</span></label>
+            <input type="number" class="form-control" formControlName="level1_days" required maxlength="64">
+          </div>
+          <div class="col-sm-4 form-group">
+            <label for="Level2days">Level2 Days:<span style="color:red">*</span></label>
+            <input type="number" class="form-control" formControlName="level2_days" required maxlength="64">
+          </div>
+          <div class="col-sm-4 form-group">
+            <label for="Level3days">Level3 Days:<span style="color:red">*</span></label>
+            <input type="number" class="form-control"  formControlName="level3_days"  required maxlength="64">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4 form-group">
+            <label for="Level1Attempts" class="required">Level1 Attempts:<span style="color:red">*</span></label>
+            <input type="number" class="form-control" required formControlName="level1_max_attempts"
+              maxlength="64">
+          </div>
+          <div class="col-sm-4 form-group">
+            <label for="Level2Attempts">Level2 Attempts:<span style="color:red">*</span></label>
+            <input type="number" class="form-control" required formControlName="level2_max_attempts"
+              maxlength="64">
+          </div>
+          <div class="col-sm-4 form-group">
+            <label for="Level3Attempts">Level3 Attempts:<span style="color:red">*</span></label>
+            <input type="number" class="form-control" required formControlName="level3_max_attempts" maxlength="64">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="range" class="card card-block bg-faded ">
+      <h2>Range</h2>
+      <div class="">
+        <div class="row">
+          <div class="col-sm-4 form-group">
+            <label for="MinValue" class="required">Min Value:</label>
+            <input type="text" class="form-control"  formControlName="min_value" maxlength="64" >
+          </div>
+          <div class="col-sm-4 form-group">
+            <label for="MaxValue">Max Value:</label>
+            <input type="text" class="form-control"  formControlName="max_value" maxlength="64">
+          </div>
+          <div class="col-sm-4 form-group">
+            <label for="RangeMin">Range Min:</label>
+            <input type="text" class="form-control"  formControlName="range_min" maxlength="64">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4 form-group">
+            <label for="RangeMax" class="required">Range Max:</label>
+            <input type="text" class="form-control"  formControlName="range_max"
+              maxlength="64">
+          </div>
+          <div class="col-sm-4 form-group">
+            <label for="RangeType">Range Type:</label>
+            <input type="text" class="form-control" formControlName="range_type"
+              maxlength="64">
+          </div>
+          <div class="col-sm-4 form-group">
+            <label for="RangeSourceField">Range Source Field:</label>
+            <input type="text" class="form-control"  formControlName="range_source_field" maxlength="64">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4 form-group">
+            <label for="RangeSourceEvent" class="required">Range Source Event:</label>
+            <input type="text" class="form-control"  formControlName="range_source_event"
+              maxlength="64">
+          </div>
+          <div class="col-sm-4 form-group">
+            <label for="Requiredflag"> Required Flag:<span style="color:red">*</span></label>
+            <select class="form-control" formControlName="required_flag" required>
+            <option value="0">0</option>
+            <option value="1">1</option>
+          </select>
+          </div>
+          <div class="col-sm-4 form-group">
+            <label for="ExclusionInd">Exclusion Ind:</label>
+            <input type="text" class="form-control"  formControlName="excl_ind" maxlength="64">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="field" class="card card-block bg-faded ">
+      <h2>Field</h2>
+
+      <div class="">
+        <div class="row">
+          <div class="col-sm-4 form-group">
+            <label for="FieldName" class="required">Field Name:<span style="color:red">*</span></label>
+            <input type="text" class="form-control"  formControlName="field_name" maxlength="64" required>
+          </div>
+          <div class="col-sm-4 form-group">
+            <label for="FieldType">Field Type:</label>
+            <input type="text" class="form-control"  formControlName="field_type" maxlength="64">
+          </div>
+          <div class="col-sm-4 form-group">
+            <label for="FieldRuleSeq">Field Rule Seq:<span style="color:red">*</span></label>
+            <input type="number" class="form-control"  formControlName="field_rule_seq" maxlength="64" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4 form-group">
+            <label for="FieldLabel" class="required">Field Label:</label>
+            <input type="text" class="form-control"  formControlName="field_label"
+              maxlength="64">
+          </div>
+          <div class="col-sm-4 form-group">
+            <label for="FieldLocation">Field Location:</label>
+            <input type="text" class="form-control" formControlName="field_location"
+              maxlength="64">
+          </div>
+          <div class="col-sm-4 form-group">
+            <label for="FieldSeq">Field Seq:</label>
+            <input type="text" class="form-control" formControlName="field_seq" maxlength="64">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4 form-group">
+            <label for="FieldQueryMsg" class="required">Field Query Msg:</label>
+            <input type="text" class="form-control" formControlName="field_query_msg"
+              maxlength="64">
+          </div>
+          <div class="col-sm-4 form-group">
+            <label for="FieldRuleDelay">Field Rule Delay:</label>
+            <input type="text" class="form-control" formControlName="field_rule_delay"
+              maxlength="64">
+          </div>
+          <div class="col-sm-4 form-group">
+            <label for="FieldRuleMsg">Field Rule Msg:</label>
+            <input type="text" class="form-control" formControlName="field_rule_msg" maxlength="64">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4 form-group">
+            <label for="FormatString" class="required">Format String:</label>
+            <input type="text" class="form-control"   formControlName="format_string"
+              maxlength="64">
+          </div>
+          <div class="col-sm-4 form-group">
+            <label for="CdrcFormName">Cdrc Form Name:</label>
+            <input type="text" class="form-control"  formControlName="cdrc_form_name"
+              maxlength="64">
+          </div>
+          <div class="col-sm-4 form-group">
+            <label for="CdrcFieldName">Cdrc Field Name:</label>
+            <input type="text" class="form-control"  formControlName="cdrc_field_name" maxlength="64">
+          </div>
+          <div class="col-sm-4 form-group">
+            <label for="FieldsAffected">Fields Affected:</label>
+            <input type="text" class="form-control"  formControlName="fields_affected" maxlength="64">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="custom" class="card card-block bg-faded ">
+      <h2>Custom</h2>
+      <div class="">
+        <div class="row">
+          <div class="col-sm-4 form-group">
+            <label for="CustomRuleSql" class="required">Custom Rule Sql:</label>
+            <input type="text" class="form-control"  formControlName="custom_rule_sql" maxlength="64">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="conditional" class="card card-block bg-faded ">
+      <h2>Conditional</h2>
+      <div class="">
+        <div class="row">
+          <div class="col-sm-4 form-group">
+            <label for="ConditionalField" class="required">Conditional Field:</label>
+            <input type="text" class="form-control"  formControlName="conditional_field" maxlength="64" >
+          </div>
+          <div class="col-sm-4 form-group">
+            <label for="ConditionalValue">Conditional Value:</label>
+            <input type="text" class="form-control"  formControlName="conditional_value" maxlength="64">
+          </div>
+          <div class="col-sm-4 form-group">
+            <label for="ConditionalForm">Conditional Form:</label>
+            <input type="text" class="form-control"  formControlName="conditional_form" maxlength="64">
+          </div>
+          <div class="col-sm-4 form-group">
+            <label for="OptionalValue">Optional Value:</label>
+            <input type="text" class="form-control"  formControlName="optional_value" maxlength="64">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="override" class="card card-block bg-faded ">
+      <h2>Override</h2>
+      <div class="">
+        <div class="row">
+          <div class="col-sm-4 form-group">
+            <label for="OverrideField" class="required">Override Field:</label>
+            <input type="text" class="form-control"  formControlName="override_field" maxlength="64" >
+          </div>
+          <div class="col-sm-4 form-group">
+            <label for="OverrideValue">Override Value:</label>
+            <input type="text" class="form-control"  formControlName="override_value" maxlength="64">
+          </div>
+          <div class="col-sm-4 form-group">
+            <label for="OverrideForm">Override Form:</label>
+            <input type="text" class="form-control"  formControlName="override_form" maxlength="64">
+          </div>
+          <div class="col-sm-4 form-group">
+            <label for="OverrideReason">Override Reason:</label>
+            <input type="text" class="form-control"  formControlName="override_reason" maxlength="64">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card card-block bg-faded ">
+      <div class=" float-sm-right">
+        <div class="col-xs-4">
+          <div class="float-right px-1">
+            <button type="submit" class="btn btn-success" [disabled]="!addForm.valid" value="">Save</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</form>
