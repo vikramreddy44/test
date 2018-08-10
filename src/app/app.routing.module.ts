@@ -36,6 +36,11 @@ const routes: Routes = [
         path: 'auth',
         // component: LoginLayoutComponent,
         loadChildren: './features/auth/auth.module#AuthModule',
+    },
+    {
+        path: 'admin',
+        component: MainLayoutComponent,
+        loadChildren: './features/admin/admin.module#AdminModule'
     }
 ];
 

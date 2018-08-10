@@ -131,39 +131,6 @@ body > app-root > app-main-layout > app-report > div > div.col-10.p-0 > app-serv
 ng2-smart-table-pager{
   background: #FFF !important;
 }
-.msgsearchDiv{
-    margin:10px;
-  } *
-  
-  
-  .msghomeReport ng2-smart-table  table  thead  .ng2-smart-titles{
-    background: #ddd !important;
-  }
-  .msghomeReport  ng2-smart-table  table  thead .ng2-smart-filters{
-    /* display: none; */
-    padding-bottom: 50px;
-  }
-  .msghomeReport > ng2-smart-table > table > tbody > tr > td,
-  .msghomeReport > ng2-smart-table > table > thead > tr > th{
-     border: 1px solid #ddd;
-  }
-
-  .xmlsearchDiv{
-    margin:10px;
-  } *
-  
-  
-  .xmlhomeReport ng2-smart-table  table  thead  .ng2-smart-titles{
-    background: #ddd !important;
-  }
-  .xmlhomeReport  ng2-smart-table  table  thead .ng2-smart-filters{
-    /* display: none; */
-    padding-bottom: 50px;
-  }
-  .xmlhomeReport > ng2-smart-table > table > tbody > tr > td,
-  .xmlhomeReport > ng2-smart-table > table > thead > tr > th{
-     border: 1px solid #ddd;
-  }
 
   /* For Firefox */
 input[type='number'] {
@@ -179,3 +146,32 @@ input[type=number]::-webkit-outer-spin-button {
 .container{
   margin-bottom: 10%;
 }
+/* input[required]  {
+  border:1px solid red;
+} */
+
+label.required::before {
+  color: #e82a4a;
+  content: "*";
+  -ms-text-rendering: auto;
+  text-rendering: auto;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  margin-right: 5px;
+}
+/* input:required {
+  box-shadow: 4px 4px 20px rgba(200, 0, 0, 0.85);
+} */
+/* input:required:focus {
+  border: 1px solid red;
+  outline: none;
+} */
+/* input:invalid {
+  background-color: pink;
+} */
+/* input:required:invalid {
+  border-color: #C00000;
+} */
+/* invalid input {
+  border: 1px solid #e82a4a !important;
+} */
